@@ -1,14 +1,17 @@
 const express = require("express");
 const cors = require("cors");
+const connectDB = require("./config/db")
 
 // Sets port if deploying to external provider 
 // or port assigned already
 const port = process.env.port || 5000;
 
-// Equivalent of create server in http library
 const app = express();
 
-// Call the middleware we want to use
+//Connect the database 
+connectDB();
+
+// Middlewear on all routes 
 app.use(cors());
 app.use(express.json());
 
