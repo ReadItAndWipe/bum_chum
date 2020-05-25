@@ -1,16 +1,16 @@
-# Express Server Template
+# Read-it-n-wipe 
 
-Template express server created by Code Like a Girl / Gentech team.
+
 
 ## Middleware
 
 - cors
-- body-parser
+- express.json
 
 ## Default port
 
-Default port is 3030, because 3000 is so overdone.
+Default port is 5000 
 
 ## Running Server
 
-Install dependencies first by opening a terminal into the folder you have cloned this repo to, then run `npm i`. Once thats successfully completed run `npm start` to run the server. Go you.
+Run server: "npm run server" 
