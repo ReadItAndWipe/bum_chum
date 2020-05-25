@@ -3,19 +3,19 @@ const cors = require("cors");
 
 // Sets port if deploying to external provider 
 // or port assigned already
-const port = process.env.port || 3030;
+const port = process.env.port || 5000;
 
-// Equivalant of create server in http library
+// Equivalent of create server in http library
 const app = express();
 
 // Call the middleware we want to use
 app.use(cors());
-app.use(bodyParser.json());
+app.use(express.json());
 
-// Define a simple route for GET
+// Routes
 app.get("/",(req,res) => {
-    res.send("Hi from your Express Server. From past you. You are awesome.")
+    res.send("Up and wiping")
 });
 
 // Listen
-app.listen(port, () => console.log(`Listening on port ${port}. Arrr.`));
+app.listen(port, () => console.log(`Ready to wide on bum ${port}`));
