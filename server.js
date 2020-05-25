@@ -1,6 +1,5 @@
 const express = require("express");
 const cors = require("cors");
-const bodyParser = require("body-parser");
 
 // Sets port if deploying to external provider 
 // or port assigned already

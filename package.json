@@ -1,7 +1,7 @@
 {
   "name": "express_servertemplate",
   "version": "1.0.0",
-  "description": "",
+  "description": "Template express server created by Code Like a Girl / Gentech team.",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,11 +10,25 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
+    "config": "^3.3.1",
     "cors": "^2.8.5",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "express-validator": "^6.5.0",
+    "gravatar": "^1.8.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.15"
   },
   "devDependencies": {
     "nodemon": "^2.0.3"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Read-nWipe/bum_chum.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Read-nWipe/bum_chum/issues"
+  },
+  "homepage": "https://github.com/Read-nWipe/bum_chum#readme"
 }
