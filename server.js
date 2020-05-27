@@ -1,22 +1,24 @@
 const express = require("express");
 const cors = require("cors");
-const bodyParser = require("body-parser");
+const connectDB = require("./config/db")
 
 // Sets port if deploying to external provider 
 // or port assigned already
-const port = process.env.port || 3030;
+const port = process.env.port || 5000;
 
-// Equivalant of create server in http library
 const app = express();
 
-// Call the middleware we want to use
-app.use(cors());
-app.use(bodyParser.json());
+//Connect the database 
+connectDB();
 
-// Define a simple route for GET
+// Middlewear on all routes 
+app.use(cors());
+app.use(express.json());
+
+// Routes
 app.get("/",(req,res) => {
-    res.send("Hi from your Express Server. From past you. You are awesome.")
+    res.send("Up and wiping")
 });
 
 // Listen
-app.listen(port, () => console.log(`Listening on port ${port}. Arrr.`));
+app.listen(port, () => console.log(`Ready to wide on bum ${port}`));
