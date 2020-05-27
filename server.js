@@ -1,6 +1,6 @@
-const express = require("express");
-const cors = require("cors");
-const connectDB = require("./config/db")
+const express = require('express');
+const cors = require('cors');
+const connectDB = require('./config/db')
 
 // Sets port if deploying to external provider 
 // or port assigned already
@@ -13,12 +13,10 @@ connectDB();
 
 // Middlewear on all routes 
 app.use(cors());
-app.use(express.json());
+app.use(express.json({ extended: false }));
 
-// Routes
-app.get("/",(req,res) => {
-    res.send("Up and wiping")
-});
-
+// Define Routes
+app.use('/api/users', require('./routes/api/users'));
+app.use('/api/auth', require('./routes/api/auth'));
 // Listen
 app.listen(port, () => console.log(`Ready to wide on bum ${port}`));
