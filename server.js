@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const connectDB = require('./config/db');
+const bodyParser = require('body-parser');
 
 const path = require('path');
 
@@ -17,9 +18,11 @@ connectDB();
 app.use(cors());
 app.use(express.json({ extended: false }));
 
+// pug templating
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
+app.use(bodyParser.urlencoded({ extended: true }));
 // Define Routes
 app.use('/api/', require('./routes/api'))
 app.use('/api/users', require('./routes/api/users'));
