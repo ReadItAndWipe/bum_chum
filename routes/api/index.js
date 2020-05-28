@@ -1,8 +1,9 @@
 const express = require('express');
 const router = express.Router();
 
-//Import Roll schema
+//Import Roll and Subsc schema
 const Roll = require('../../models/Roll');
+const Subscription = require('../../models/Subscription');
 
 // @route    GET api/
 // @desc     Landing page shows all rolls  
@@ -10,9 +11,9 @@ const Roll = require('../../models/Roll');
 router.get('/', async (req, res) => {
   //Retrieve all rolls from database 
   try {
+    let subscriptions = await Subscription.find()
     let rolls = await Roll.find()
-    //Render home page 
-    res.render('home', { rolls } )
+    res.render('home', { rolls, subscriptions } )
   } catch (error) {
     if(!rolls){
       return res.status(501).json("out of rolls")
@@ -21,37 +22,3 @@ router.get('/', async (req, res) => {
 });
 
 module.exports = router;
-
-//   if(req.query.category){
-//     return Post.findByCategory(req.query.category)
-// }else{
-//     return Post.find();
-// }
-//   getAllPosts(req).
-//   sort({
-//       modified_date: -1
-//   }).
-//   exec((err, posts) => {
-//       if (err) {
-//           res.status(500);
-//           return res.json({
-//               error: err.message
-//           });
-//       }
-//       res.render('posts', { posts } );
-//   });
-// }
-//   getAllPosts(req).
-//     sort({
-//         modified_date: -1
-//     }).
-//     exec((err, posts) => {
-//         if (err) {
-//             res.status(500);
-//             return res.json({
-//                 error: err.message
-//             });
-//         }
-//         res.render('posts', { posts } );
-//     });
-// };

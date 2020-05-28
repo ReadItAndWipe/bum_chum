@@ -1,17 +1,28 @@
-{"name":"Science Facts", "description": "", "category": "Study Notes", "imageURL": ""}
-{"name":"Maths Quiz", "description": "", "category": "Study Notes", "imageURL": ""}
-{"name":"", "description": "", "category": "Interesting Facts", "imageURL": ""}
-{"name":"", "description": "", "category": "Incredible/Inspirational Stories", "imageURL": ""}
-{"name":"", "description": "", "category": "Murder Mysteries", "imageURL": ""}
-{"name":"", "description": "", "category": "Funny Jokes - Toilet Humor!", "imageURL": ""}
-{"name":"", "description": "", "category": "Poems, Limericks, Haiku, Sing-Songs, Nursery Rhymes", "imageURL": ""}
-{"name":"", "description": "", "category": "Motivational Quotes", "imageURL": ""}
-{"name":"", "description": "", "category": "Loot Box", "imageURL": ""}
-{"name":"Christmas1", "description": "", "category": "Seasonal", "imageURL": ""}
-{"name":"Christmas2", "description": "", "category": "Seasonal", "imageURL": ""}
-{"name":"Christmas3", "description": "", "category": "Seasonal", "imageURL": ""}
-{"name":"Christmas4", "description": "", "category": "Seasonal", "imageURL": ""}
-{"name":"", "description": "", "category": "I'm On A Roll! - Personalised Bog Paper", "imageURL": ""}
-{"name":"Storm Poopers", "description": "", "category": "Star Wars Themed", "imageURL": ""}
-{"name":"", "description": "", "category": "Poo-litical Satire", "imageURL": ""}
-{"name":"", "description": "", "category": "Trump", "imageURL": ""}
+
+{"name":"Mad On Science", "description": "A collection of interesting information spanning the realms of physics, chemistry and biology", "category": "Brain Dumps", "imageURL": "https://media.manufactum.de/is/image/Manufactum/750s_shop/stainless-steel-toilet-paper-holder--83490_01.jpg"}
+{"name":"Maths Quiz", "description": "Games, puzzles, problems and the odd soduku", "category": "Brain Dumps", "imageURL": "https://media.manufactum.de/is/image/Manufactum/750s_shop/stainless-steel-toilet-paper-holder--83490_01.jpg"}
+{"name":"Kids Corn-er", "description": "The kids won't stop learning with this specially designed roll", "category": "Brain Dumps", "imageURL": "https://media.manufactum.de/is/image/Manufactum/750s_shop/stainless-steel-toilet-paper-holder--83490_01.jpg"}
+
+{"name":"Guinness World Records", "description": "The most amazing feats recorded around the world from the past century", "category": "Interesting Facts", "imageURL": ""}
+{"name":"The World At Large", "description": "Super interesting facts about people, animals and nature", "category": "Interesting Facts", "imageURL": ""}
+
+{"name":"Motivate Your Movements", "description": "Motivational quotes from ancient wisdoms to modern thinkers - something to ponder while you poo!", "category": "Motivational Quotes", "imageURL": ""}
+
+{"name":"Entrepreneurial Success Stories", "description": "Real life rags to riches stories of business mogels", "category": "Incredible/Inspirational Stories", "imageURL": ""}
+{"name":"Rise To The Top", "description": "Chronicles the trials and tribulations of famous celebrities in their persuit of fame ", "category": "Incredible/Inspirational Stories", "imageURL": ""}
+
+{"name":"A Murder Most Foul", "description": "A collection of the most horrid murder porn known to man", "category": "Murder Mysteries", "imageURL": ""}
+
+{"name":"Funny Jokes", "description": "Possibly the funniest jokes available in your bathroom right now", "category": "Toilet Humor!", "imageURL": ""}
+{"name":"Poems, Limericks, Haiku, Sing-Songs, Nursery Rhymes", "description": "Whistle while you work", "category": "Toilet Humor!", "imageURL": ""}
+
+{"name":"Trump", "description": "A collection of all your favourite Trumpisms - nothing quite like a Trump Dump!", "category": "Poo-litical Satire", "imageURL": ""}
+{"name":"Aussie Poo-litics", "description": "A collection of Australian politiclally themed funnies", "category": "Poo-litical Satire", "imageURL": ""}
+
+{"name":"Christmas", "description": "Ho Ho Ho - Santas got a big surprise for you this year!", "category": "Seasonal", "imageURL": ""}
+{"name":"Valentines Day", "description": "Something special for every loving couple", "category": "Seasonal", "imageURL": ""}
+{"name":"Easter", "description": "Eaten too much chocolate? This Easter inspired theme will keep you entertained while you sort it out", "category": "Seasonal", "imageURL": ""}
+{"name":"St Patricks", "description": "What better way to get over all of those Guinnesses than some fun facts about the Emerald Isle", "category": "Seasonal", "imageURL": ""}
+{"name":"Halloween", "description": "Guaranteed to scare the sh*t out of you!", "category": "Seasonal", "imageURL": ""}
+
+{"name":"Storm Poopers", "description": "Love Star Wars? Now you can do more than just play with your lightsaber", "category": "Star Wars Themed", "imageURL": ""}
