@@ -1,7 +1,7 @@
 extends layout
 
 block content
-    h1 Rolls Aavailable
+    h1 Rolls Available
     if rolls.length
         table
             tr
@@ -15,4 +15,18 @@ block content
                     td= roll.description
     else
         p No rolls yet :(
-    <h3>Meow</h3>
+
+    <h3>Subscriptions</h3>
+    if subscriptions.length
+        table
+            tr
+                th Size
+                th Description
+                th Price
+            each subscription in subscriptions
+                tr
+                    td= subscription.size
+                    td= subscription.description
+                    td= subscription.price
+    else
+        p No rolls yet :(
