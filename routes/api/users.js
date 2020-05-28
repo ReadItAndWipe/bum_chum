@@ -4,6 +4,8 @@ const router = express.Router();
 //Import express validator 
 const { check, validationResult } = require('express-validator');
 
+//Import User Scheme 
+const User = require('../../models/User');
 
 // @route    GET api/users
 // @desc     Register user 
@@ -25,14 +27,18 @@ router.post(
     if(!errors.isEmpty()){
       return res.status(400).json({ errors: errors.array() });
     }
-
-  // try {
+    try {
+      
+      // Check if user exists 
     
-  // } catch (error) {
-    
-  // }
+      // Encrypt password 
+  
+      // Return jsonwebtoken 
 
-  //   const user = User.find()
+
+      } catch (error) {
+    
+  }
   res.send("User added")
 });
 

@@ -1,11 +1,11 @@
 {
   "name": "express_servertemplate",
   "version": "1.0.0",
-  "description": "Template express server created by Code Like a Girl / Gentech team.",
+  "description": "Subscription service for people who like their toilet time",
   "main": "server",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "nodemon server"
+    "totoilet": "nodemon server"
   },
   "author": "",
   "license": "ISC",
