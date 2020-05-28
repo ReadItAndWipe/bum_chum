@@ -1,0 +1,27 @@
+
+
+### GET all rolls
+GET http://localhost:5000/api HTTP/1.1
+
+
+### POST register route - make tester-bob 
+POST http://localhost:5000/auth/register
+content-type: application/json
+
+{
+    "username":"tester_bob",
+    "email": "bob@test.bob",
+    "password": "Password1"
+}
+
+
+### POST auth route - tester-bob login 
+POST http://localhost:5000/auth/login
+content-type: application/json
+
+{
+    "username":"tester_bob",
+    "password": "Password1"
+}
+
+

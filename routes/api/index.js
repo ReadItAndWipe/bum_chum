@@ -11,7 +11,7 @@ router.get('/', async (req, res) => {
   //Retrieve all rolls from database 
   try {
     let rolls = await Roll.find()
-    res.json("fucken genuses")
+    res.render('home', { rolls } )
   } catch (error) {
     if(!rolls){
       return res.status(501).json("out of rolls")
