@@ -17,6 +17,7 @@ connectDB();
 // Middlewear on all routes 
 app.use(cors());
 app.use(express.json({ extended: false }));
+app.use(express.static('public'));
 
 // pug templating
 app.set('views', path.join(__dirname, 'views'));
