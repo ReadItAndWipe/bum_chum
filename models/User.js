@@ -13,10 +13,6 @@ const UserSchema = new mongoose.Schema({
   password: {
     type: String, 
     required: true,
-  },
-  date: {
-    date: Date, 
-    default: Date.now,
   }
 });
 
