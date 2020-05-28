@@ -1,0 +1,18 @@
+extends layout
+
+block content
+    h1 Rolls Aavailable
+    if rolls.length
+        table
+            tr
+                th Name
+                th Category
+                th Description
+            each roll in rolls
+                tr
+                    td= roll.name
+                    td= roll.category
+                    td= roll.description
+    else
+        p No rolls yet :(
+    <h3>Meow</h3>

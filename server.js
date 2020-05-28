@@ -2,6 +2,8 @@ const express = require('express');
 const cors = require('cors');
 const connectDB = require('./config/db');
 
+const path = require('path');
+
 // Sets port if deploying to external provider 
 // or port assigned already
 const port = process.env.port || 5000;
@@ -14,6 +16,9 @@ connectDB();
 // Middlewear on all routes 
 app.use(cors());
 app.use(express.json({ extended: false }));
+
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'pug');
 
 // Define Routes
 app.use('/api/', require('./routes/api'))
