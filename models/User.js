@@ -13,6 +13,10 @@ const UserSchema = new mongoose.Schema({
   password: {
     type: String, 
     required: true,
+  },
+  subscription: {
+    type: mongoose.Schema.Types.ObjectId,
+    res: 'subscription'
   }
 });
 

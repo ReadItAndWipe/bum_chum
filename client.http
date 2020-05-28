@@ -5,15 +5,14 @@ GET http://localhost:5000/api HTTP/1.1
 
 
 ### POST register route - make tester-bob 
-POST http://localhost:5000/auth/register
+POST http://localhost:5000/api/users
 content-type: application/json
 
 {
-    "username":"tester_bob",
-    "email": "bob@test.bob",
-    "password": "Password1"
+    "name":"BoboThe Builder",
+    "email": "Bbuilder@gmail.com",
+    "password": "123456"
 }
-
 
 ### POST auth route - tester-bob login 
 POST http://localhost:5000/auth/login
