@@ -11,6 +11,7 @@ router.get('/', async (req, res) => {
   //Retrieve all rolls from database 
   try {
     let rolls = await Roll.find()
+    //Render home page 
     res.render('home', { rolls } )
   } catch (error) {
     if(!rolls){
