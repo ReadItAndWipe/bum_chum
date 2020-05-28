@@ -1,0 +1,26 @@
+extends layout 
+
+block content
+    form(method='POST' action='/api/users')
+        div.form-group
+            label(for="name") Name:
+            input(
+                type="text"
+                name="name"
+                placeholder='first and last'
+            )
+        div.form-group
+            label(for="email") Email:
+            input(
+                type="email"
+                name="email"
+                placeholder='meow'
+            )
+        div.form-group
+            label(for="password") Password:
+            input(
+                type="text"
+                name="password"
+                placeholder='meowmeow'
+            )
+        button.btn.btn-primary(type='submit') Sign up
