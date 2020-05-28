@@ -9,8 +9,8 @@ POST http://localhost:5000/api/users
 content-type: application/json
 
 {
-    "name":"BoboThe Builder",
-    "email": "Bbuilder@gmail.com",
+    "name":"Osco the Builder",
+    "email": "Obuilder@gmail.com",
     "password": "123456"
 }
 

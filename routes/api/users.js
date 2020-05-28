@@ -35,7 +35,7 @@ router.post(
       return res.status(400).json({ errors: errors.array() });
     }
     //Render signup form 
-    res.render('signup', { title: 'Registration form'});
+    // res.render('signup', { title: 'Registration form'});
     //Request data destructured 
     const {
       name, 
