@@ -1,32 +1,48 @@
 extends layout
 
 block content
-    h1 Rolls Available
-    if rolls.length
-        table
-            tr
-                th Name
-                th Category
-                th Description
-            each roll in rolls
-                tr
-                    td= roll.name
-                    td= roll.category
-                    td= roll.description
-    else
-        p No rolls yet :(
+     .main.container
+        .row
+            .col-md-12.col-md-offset-3
+                //- h1 Rolls Available
+                //- if rolls.length
+                //-     table
+                //-         tr
+                //-             th Name
+                //-             th Category
+                //-             th Description
+                //-         each roll in rolls
+                //-             tr
+                //-                 td= roll.name
+                //-                 td= roll.category
+                //-                 td= roll.description
+                //- else
+                //-     p No rolls yet :(
+                
+                h1 Rolls Available
+                div.card-columns
+                    if rolls.length
+                        each roll in rolls
+                            <div class="card roll-card">
+                                img.card-img-top(src=`${roll.imageURL}` alt="Card image cap")
+                                <div class="card-body">
+                                    h5.card-title= roll.name
+                                    p.card-text= roll.category
+                                    p.card-text= roll.description
+                                </div>
+                            </div>
+                
 
-    <h3>Subscriptions</h3>
-    if subscriptions.length
-        table
-            tr
-                th Size
-                th Description
-                th Price
-            each subscription in subscriptions
-                tr
-                    td= subscription.size
-                    td= subscription.description
-                    td= subscription.price
-    else
-        p No rolls yet :(
+
+                <h3>Subscriptions</h3>
+                if subscriptions.length
+                    each subscription in subscriptions
+                        <div class="card text-center">
+                            <div class="card-body">
+                                h5.card-header= subscription.size
+                                p.card-text= subscription.description
+                                p.card-text only $ #{subscription.price} per month
+                                <a href="#" class="btn btn-primary">Order NOW!</a>
+                            </div>
+                        </div>
+                        <br>
