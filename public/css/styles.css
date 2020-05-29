@@ -81,3 +81,7 @@ body {
     color: black;
   }
   
+
+  input, select {
+      width: 300px;
+  }
