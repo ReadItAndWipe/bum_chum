@@ -24,14 +24,14 @@ content-type: application/json
 }
 
 ### POST subscription route - tester-osco login 
-POST http://localhost:5000/api/subscription
+POST http://localhost:5000/api/order
 content-type: application/json
-x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWVkMDY2MThmNzljYzQ2ZDhkYzIyODQ0In0sImlhdCI6MTU5MDcxNTkyOCwiZXhwIjoxNTkxMDc1OTI4fQ.1Gj2mR2tMQUHno3mCmXlvqnVXOuKEaFhtl1abjYz5_g
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWVkMDkxOTMwZDQ1NzY0NDVmNjlhZTI2In0sImlhdCI6MTU5MDcyNzA2MCwiZXhwIjoxNTkxMDg3MDYwfQ.CPF_FWtHNa6xJxbrYoLcI0pNv3tsh01GkaCGy4pqBnw
 
 
 {
-    "name":"Osco the Builder",
-    "address": "Password1",
+    "name":"Softy",
+    "address": "myAddress",
     "rolls": "5ecf27f6f36522b5d0e8a816",
     "subscription": "5ecf9b5cfa9974108ccf378d"
 }
