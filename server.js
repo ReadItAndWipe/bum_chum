@@ -27,7 +27,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // Define Routes
 app.use('/api/', require('./routes/api'))
 app.use('/api/users', require('./routes/api/users'));
-app.use('/api/auth', require('./routes/api/auth'));
+app.use('/api/login', require('./routes/api/login'));
 app.use('/api/order', require('./routes/api/order'));
 app.use('/api/myorders', require('./routes/api/myorders'));
 
