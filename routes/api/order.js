@@ -1,6 +1,5 @@
 const express = require('express');
 const router = express.Router();
-const auth = require('../../middleware/auth')
 
 //Import express validator 
 const { check, validationResult } = require('express-validator');
@@ -19,6 +18,11 @@ router.get('/', async (req, res) => {
   res.render('order_form', {title: "Order a order", subscriptions, rolls})
 });
 
+const {
+  userAuthenticated
+} = require('../../middleware/passport');
+
+router.use(userAuthenticated);
 // @route    POST api/order
 // @desc     Create order for current user  
 // @access   Private 
@@ -37,7 +41,6 @@ router.post('/',
     .not()
       .isEmpty(),
   ],  
-  auth, 
   async (req, res) => {
     // Check validations for errors 
    

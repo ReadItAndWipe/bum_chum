@@ -5,12 +5,12 @@ block content
         .row
             .col-md-6.col-md-offset-3
                 h1 Sign Up
-                form(method='POST' action='/api/users')
+                form(method='POST' action='/api/login/register')
                     div.form-group
-                        label(for="name") Name:
+                        label(for="username") Username:
                         input(
                             type="text"
-                            name="name"
+                            name="username"
                             placeholder='first and last'
                         )
                     div.form-group

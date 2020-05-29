@@ -7,7 +7,13 @@ const auth = require("../../middleware/auth")
 //Import Roll and Subsc schema
 const Roll = require('../../models/Roll');
 const Subscription = require('../../models/Subscription');
-const Order = require('../../models/Order')
+const Order = require('../../models/Order');
+
+const {
+  userAuthenticated
+} = require('../../middleware/passport');
+
+router.use(userAuthenticated);
 
 // @route    GET api/myorders
 // @desc     Show all orders for current user   

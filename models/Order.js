@@ -7,7 +7,7 @@ const OrderSchema = new mongoose.Schema({
     },
     subscription: {
         type: mongoose.Schema.Types.ObjectId,
-        res: 'user',
+        res: 'subscription',
     },
     name: {
       type: String,
