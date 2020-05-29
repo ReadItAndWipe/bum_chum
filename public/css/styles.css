@@ -4,6 +4,22 @@ body {
     
 }
 
+.container{
+    background-color: white;
+    opacity: 90%;
+ }
+
+ .full {
+    min-height: 100vh;
+    background-image: url("/../tp_images/oh_sheet.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    
+}
+ 
+
 .logo {
     text-align: center;
 }
@@ -12,10 +28,22 @@ body {
     width: 200px;
 }
 
+.box{
+    display:flex;
+    flex:wrap;
+    justify-content:space-evenly;
+}
+
+.card-deck{
+    height: 600px;
+    width:350px;
+}
+
 .card-group{
 	
 }
 
 .roll-card {
-	width: 400px;
+	/* width: 400px; */
 }
+
