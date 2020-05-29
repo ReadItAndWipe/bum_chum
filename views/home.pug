@@ -18,6 +18,7 @@ block content
                 //-                 td= roll.description
                 //- else
                 //-     p No rolls yet :(
+
                 <div class="container full">
                 </div>
                     h1 Rolls Available
@@ -35,10 +36,11 @@ block content
                                             </div>
                                         </div>
                                     </div>
+
                                 </div>
 
 
-                <h3>Subscriptions</h3>
+                img(src='/headings/subscriptions.png')
                 if subscriptions.length
                     each subscription in subscriptions
                         <div class="card text-center">
@@ -50,3 +52,16 @@ block content
                             </div>
                         </div>
                         <br>
+                
+                <h3> Login or Sign Up</h3>
+                div.card-columns
+                    <div class="card roll-card">
+                        <div class="card-body">
+                        <a href="/api/login" class="btn btn-primary">Login</a>
+                        </div>
+                    </div>
+                    <div class="card roll-card">
+                        <div class="card-body">
+                        <a href="/api/users" class="btn btn-primary">Sign Up</a>
+                        </div>
+                    </div>

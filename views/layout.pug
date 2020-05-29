@@ -6,7 +6,26 @@ html
     link(rel='stylesheet', href='/css/styles.css')
     <link href="/logo/icon.jpg" rel="icon" type="image/x-icon" />
   body
+
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-grey fixed-bottom">
+        
+
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav">
+                <a href="/api/" class="nav-item nav-link">Home</a>
+                <a href="/api/order" class="nav-item nav-link" >Place An Order</a>
+                <a href="/api/" class="nav-item nav-link">My Orders</a>
+                <a href="/api/about" class="nav-item nav-link">About</a>
+            </div>
+        </div>
+    </nav>
+
     div.logo
-        img(src='/logo/translucent_read_it_n_wipe.png')
+        <a href='/api/'><img src='/logo/translucent_read_it_n_wipe.png'></a>
 
     block content
