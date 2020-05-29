@@ -10,16 +10,16 @@ const User = require('../../models/User');
 const Roll = require('../../models/Roll');
 const Order = require('../../models/Order');
 
-// @route    GET api/users
-// @desc     Register user 
+// @route    GET api/order
+// @desc     Generate order form 
 // @access   Public 
 router.get('/', (req, res) => {
   res.render('order_form', {title: "Order a order"})
 });
 
-// @route    POST api/users
-// @desc     Register user 
-// @access   Public 
+// @route    POST api/order
+// @desc     Create order for current user  
+// @access   Private 
 router.post('/', 
   // Validate input using express-validator 
   [check('name', 'Name required')
