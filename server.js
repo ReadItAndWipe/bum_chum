@@ -29,6 +29,7 @@ app.use('/api/', require('./routes/api'))
 app.use('/api/users', require('./routes/api/users'));
 app.use('/api/auth', require('./routes/api/auth'));
 app.use('/api/order', require('./routes/api/order'));
+app.use('/api/myorders', require('./routes/api/myorders'));
 
 // Listen
 app.listen(port, () => console.log(`Ready to wide on bum ${port}`));
