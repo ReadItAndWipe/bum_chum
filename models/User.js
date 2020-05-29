@@ -14,10 +14,6 @@ const UserSchema = new mongoose.Schema({
     type: String, 
     required: true,
   },
-  subscription: {
-    type: mongoose.Schema.Types.ObjectId,
-    res: 'subscription'
-  }
 });
 
 module.exports = User = mongoose.model('user', UserSchema) 

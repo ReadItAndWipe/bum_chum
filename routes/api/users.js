@@ -1,5 +1,8 @@
 const express = require('express');
 const router = express.Router();
+const jwt = require('jsonwebtoken');
+const bcrypt = require('bcryptjs')
+const config = require('config')
 
 //Import express validator 
 const { check, validationResult } = require('express-validator');
@@ -51,15 +54,37 @@ router.post('/',
       }
 
       user = new User(req.body);
-      await user.save()
 
       // Encrypt password 
+      const salt = await bcrypt.genSalt(10);
+
+      user.password = await bcrypt.hash(password, salt);
+
+      await user.save()
+
       // Return jsonwebtoken 
+      const payload = {
+          user: {
+              id: user.id
+          }
+      }
+
+      //Secret lives in default.json 
+      jwt.sign(
+          payload,
+          config.get('jwtSecret'),
+          { expiresIn: 360000 },
+          (err, token) => {
+              if(err) throw err;
+                res.json({token});
+          } 
+      )
+
       } catch (error) {
         console.error(error.message)
         res.status(500).json("server error")
       }
-  res.send("user signed up")
+//   res.send("user signed up")
 });
 
 module.exports = router; 
