@@ -19,7 +19,7 @@ block content
                 //- else
                 //-     p No rolls yet :(
                 
-                h1 Rolls Available
+                img(src='/headings/rolls_available.png')
                 div.card-columns
                     if rolls.length
                         each roll in rolls
@@ -34,7 +34,7 @@ block content
                 
 
 
-                <h3>Subscriptions</h3>
+                img(src='/headings/subscriptions.png')
                 if subscriptions.length
                     each subscription in subscriptions
                         <div class="card text-center">
