@@ -27,7 +27,7 @@ const logout = function (req, res) {
     console.log('logged out user');
     console.log('session object:', req.session);
     console.log('req.user:', req.user);
-    res.sendStatus(200);
+    res.redirect('/api');
 }
 
 // helper functions
