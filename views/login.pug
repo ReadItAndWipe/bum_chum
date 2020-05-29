@@ -1,0 +1,23 @@
+extends layout 
+
+block content
+    .main.container
+        .row
+            .col-md-6.col-md-offset-3
+                h1 Login 
+                form(method='POST' action='/api/login')
+                    div.form-group
+                        label(for="email") Email:
+                        input(
+                            type="email"
+                            name="email"
+                            placeholder='meow'
+                        )
+                    div.form-group
+                        label(for="password") Password:
+                        input(
+                            type="text"
+                            name="password"
+                            placeholder='meowmeow'
+                        )
+                    button.btn.btn-primary(type='submit') Login
