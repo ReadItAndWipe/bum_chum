@@ -22,23 +22,12 @@ block content
                         )
                     div.form-group
                         label(for="rolls") Select your default roll category:
-                        input(
-                            type="text"
-                            name="rolls"
-                            placeholder='storm poopers'
-                        )
+                        select(name='dropDown', id='')
+                            each roll in rolls
+                                option=roll.name
                     div.form-group
-                        label(for="size") Select your default package size:
-                        input(
-                            type="text"
-                            name="size"
-                            placeholder='the clean snap $25'
-                        )
-                    div.form-group
-                        label(for="price") Select your default package price:
-                        input(
-                            type="number"
-                            name="price"
-                            placeholder='the clean snap $25'
-                        )
+                        label(for="subscription") Select your default subscription size:
+                        select(name='dropDown', id='')
+                            each subscription in subscriptions
+                                option=subscription.size     
                     button.btn.btn-primary(type='submit') Submit order

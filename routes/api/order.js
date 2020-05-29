@@ -6,15 +6,17 @@ const auth = require('../../middleware/auth')
 const { check, validationResult } = require('express-validator');
 
 //Import User Scheme 
-const User = require('../../models/User');
+const Subscription= require('../../models/Subscription');
 const Roll = require('../../models/Roll');
 const Order = require('../../models/Order');
 
 // @route    GET api/order
 // @desc     Generate order form 
 // @access   Public 
-router.get('/', (req, res) => {
-  res.render('order_form', {title: "Order a order"})
+router.get('/', async (req, res) => {
+  let subscriptions = await Subscription.find()
+  let rolls = await Roll.find()
+  res.render('order_form', {title: "Order a order", subscriptions, rolls})
 });
 
 // @route    POST api/order
