@@ -9,8 +9,8 @@ POST http://localhost:5000/api/users
 content-type: application/json
 
 {
-    "name":"Osco the Builder",
-    "email": "Obuilder@gmail.com",
+    "name":"Osco",
+    "email": "Osco@gmail.com",
     "password": "123456"
 }
 
@@ -19,8 +19,21 @@ POST http://localhost:5000/auth/login
 content-type: application/json
 
 {
-    "username":"tester_bob",
+    "username":"Osco the Builder",
     "password": "Password1"
+}
+
+### POST subscription route - tester-osco login 
+POST http://localhost:5000/api/subscription
+content-type: application/json
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWVkMDY2MThmNzljYzQ2ZDhkYzIyODQ0In0sImlhdCI6MTU5MDcxNTkyOCwiZXhwIjoxNTkxMDc1OTI4fQ.1Gj2mR2tMQUHno3mCmXlvqnVXOuKEaFhtl1abjYz5_g
+
+
+{
+    "name":"Osco the Builder",
+    "address": "Password1",
+    "rolls": "5ecf27f6f36522b5d0e8a816",
+    "subscription": "5ecf9b5cfa9974108ccf378d"
 }
 
 

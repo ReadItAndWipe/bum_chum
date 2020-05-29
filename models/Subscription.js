@@ -12,17 +12,7 @@ const SubscriptionSchema = new mongoose.Schema({
     price: {
         type: Number,
         required: true,
-    },
-    user: {
-        type: mongoose.Schema.Types.ObjectId,
-        res: 'user',
-    },
-    address: {
-        type: String,
-        required: true,
-    },
-    rolls: [{}
-    ],
+    }
 });
 
 module.exports = Subscription = mongoose.model('subscription', SubscriptionSchema) 
