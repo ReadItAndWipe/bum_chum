@@ -1,8 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-//Import auth middleware
-const auth = require("../../middleware/auth")
+
 
 //Import Roll and Subsc schema
 const Roll = require('../../models/Roll');
@@ -18,14 +17,14 @@ router.use(userAuthenticated);
 // @route    GET api/myorders
 // @desc     Show all orders for current user   
 // @access   Private 
-router.get('/', auth, async (req, res) => {
+router.get('/', async (req, res) => {
   //Retrieve all order from database for current user
   try {
     let orders = await Order.find({ user: req.user.id })
     if(!orders){
         return res.json({msg: "You have no current orders"})
     }
-    res.json(orders)
+    res.render('myorders', {orders})
   } catch (error) {
       console.error(error.msg)
       return res.status(500).json("server error")
@@ -35,7 +34,7 @@ router.get('/', auth, async (req, res) => {
 // @route    GET api/myorders/:orderId
 // @desc     Show individual order for current user   
 // @access   Private 
-router.get('/', auth, async (req, res) => {
+router.get('/_id', async (req, res) => {
     //Retrieve selected order from database 
     try {
       let orders = await Order.find({ user: req.user.id })
