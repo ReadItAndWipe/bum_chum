@@ -11,8 +11,8 @@ block content
                         if rolls.length
                             each roll in rolls
                                 <div class="box">
-                                    <div class="card-deck">
-                                        <div class="card roll-card" style="min-width:250px;">
+                                    <div class="card">
+                                        <div class="card roll-card" >
                                             img.card-img-top(src=`${roll.imageURL}` alt="Card image cap")
                                             <div class="card-body">
                                                 h5.card-title= roll.name
@@ -37,3 +37,16 @@ block content
                             </div>
                         </div>
                         <br>
+                
+                <h3> Login or Sign Up</h3>
+                div.card-columns
+                    <div class="card2 roll-card">
+                        <div class="card-body">
+                        <a href="/api/login" class="btn btn-dark">Login</a>
+                        </div>
+                    </div>
+                    <div class="card2 roll-card">
+                        <div class="card-body">
+                        <a href="/api/users" class="btn btn-dark">Sign Up</a>
+                        </div>
+                    </div>
