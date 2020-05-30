@@ -3,7 +3,7 @@ const userAuthenticated = function (req, res, next) {
     if (req.isAuthenticated()) {
         next();
     } else {
-        res.sendStatus(403);
+        res.status(403).render('login', {title: "Login into your account"})
     }
 }
 
