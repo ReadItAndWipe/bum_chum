@@ -3,24 +3,28 @@ const mongoose = require('mongoose');
 const OrderSchema = new mongoose.Schema({
     user: {
         type: mongoose.Schema.Types.ObjectId,
-        res: 'user',
+        ref: 'user',
     },
     subscription: {
         type: mongoose.Schema.Types.ObjectId,
-        res: 'subscription',
+        ref: 'subscription',
+        autopopulate: true,
     },
     name: {
       type: String,
       required: true,
-  },
+    },
     address: {
         type: String,
         required: true,
     },
     rolls: {
       type: mongoose.Schema.Types.ObjectId,
-      res: 'roll',
+      ref: 'roll',
+      autopopulate: true,
     }
 });
+
+OrderSchema.plugin(require('mongoose-autopopulate'));
 
 module.exports = Order = mongoose.model('order', OrderSchema) 
