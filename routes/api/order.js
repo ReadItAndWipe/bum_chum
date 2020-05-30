@@ -75,7 +75,7 @@ router.post('/',
         console.error(error.message)
         res.status(500).json("server error")
       }
-  res.send("order success! No more toilet paper fights for life")
+  res.render('order_success')
 });
 
 module.exports = router; 
