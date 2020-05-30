@@ -4,12 +4,45 @@ body {
     
 }
 
+.container{
+    background-color: white;
+    opacity: 90%;
+ }
+
+ .full {
+    min-height: 100vh;
+    background-image: url("/../tp_images/oh_sheet.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    
+}
+ 
+
 .logo {
     text-align: center;
+    margin-top: 30px;
+}
+
+.heading {
+    text-align: center;
+    margin-top: 40px;
 }
 
 .rollImage {
     width: 200px;
+}
+
+.box{
+    display:flex;
+    flex:wrap;
+    justify-content:space-evenly;
+}
+
+.card-deck{
+    height: 600px;
+    width:350px;
 }
 
 .card-group{
@@ -39,3 +72,36 @@ body {
 .card1 {
     background: #fff;
 }
+
+
+/* Place the navbar at the bottom of the page, and make it stick */
+.navbar {
+    background-color: rgb(17, 16, 16);
+    overflow: hidden;
+    position: fixed;
+    top: 0vh;
+    bottom: 93vh;
+    width: 100%;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 15px 15px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  /* Change the color of links on hover */
+  .navbar a:hover {
+    background-color: rgb(247, 147, 30);
+    color: black;
+  }
+  
+
+  input, select {
+      width: 300px;
+  }

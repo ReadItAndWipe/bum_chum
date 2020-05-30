@@ -11,6 +11,13 @@ const { check, validationResult } = require('express-validator');
 //Import User schema
 const User = require('../../models/User');
 
+// @route    GET api/login
+// @desc     Login form for user 
+// @access   Public 
+router.get('/', (req, res) => {
+    res.render('login', {title: "Login into your account"})
+  });
+
 //@route    POST api/login
 //@desc     Authenticate user & get token 
 //@access   Public 

@@ -8,7 +8,7 @@ module.exports = function (req, res, next) {
 
     //See if a token exists 
     if(!token) {
-        return res.status(401).json({ msg: "No authentication token, no wiping"})
+        return res.status(401).render('login', {title: "Login into your account or sign up"})
     }
 
     //Verify 

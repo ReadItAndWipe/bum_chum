@@ -4,37 +4,28 @@ block content
      .main.container
         .row
             .col-md-12.col-md-offset-3
-                //- h1 Rolls Available
-                //- if rolls.length
-                //-     table
-                //-         tr
-                //-             th Name
-                //-             th Category
-                //-             th Description
-                //-         each roll in rolls
-                //-             tr
-                //-                 td= roll.name
-                //-                 td= roll.category
-                //-                 td= roll.description
-                //- else
-                //-     p No rolls yet :(
-                
-                h1 Rolls Available
-                div.card-columns
-                    if rolls.length
-                        each roll in rolls
-                            <div class="card roll-card">
-                                img.card-img-top(src=`${roll.imageURL}` alt="Card image cap")
-                                <div class="card-body">
-                                    h5.card-title= roll.name
-                                    p.card-text= roll.category
-                                    p.card-text= roll.description
+                <div class="container full">
+                </div>
+                    h1 Rolls Available
+                    div.card-columns
+                        if rolls.length
+                            each roll in rolls
+                                <div class="box">
+                                    <div class="card-deck">
+                                        <div class="card roll-card" style="min-width:250px;">
+                                            img.card-img-top(src=`${roll.imageURL}` alt="Card image cap")
+                                            <div class="card-body">
+                                                h5.card-title= roll.name
+                                                p.card-text= roll.category
+                                                p.card-text= roll.description
+                                            </div>
+                                        </div>
+                                    </div>
+
                                 </div>
-                            </div>
-                
 
 
-                <h3>Subscriptions</h3>
+                img(src='/headings/subscriptions.png')
                 if subscriptions.length
                     each subscription in subscriptions
                         <div class="card1 text-center">
@@ -42,7 +33,7 @@ block content
                                 h5.card-header= subscription.size
                                 p.card-text= subscription.description
                                 p.card-text only $ #{subscription.price} per month
-                                <a href="/api/order" class="btn btn-primary">Order NOW!</a>
+                                <a href="/api/order" class="btn btn-warning">Order NOW!</a>
                             </div>
                         </div>
                         <br>
