@@ -8,12 +8,12 @@ block content
                 each order in orders
                     div
                         h2 Subscription for #{order.name}
-                        p Size: #{order.subscription}
-                        p Category: #{order.rolls}
+                        p Size: #{order.subscription.size}
+                        p Category: #{order.rolls.category}
                         button Update subscription
 
                         h4 Next Delivery
                         p Expected arrival date 30/6/2020
                         p Rolls: Storm Poopers
-                        p Size: #{order.subscription}
+                        p Size: #{order.subscription.size}
                         button Update this delivery
