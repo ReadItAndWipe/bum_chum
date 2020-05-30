@@ -16,6 +16,7 @@
     "config": "^3.3.1",
     "connect-mongo": "^3.2.0",
     "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "express-session": "^1.17.1",
     "express-validator": "^6.5.0",
@@ -38,9 +39,8 @@
   "bugs": {
     "url": "https://github.com/Read-nWipe/bum_chum/issues"
   },
-  "homepage": "https://github.com/Read-nWipe/bum_chum#readme"
-  ,
+  "homepage": "https://github.com/Read-nWipe/bum_chum#readme",
   "engines": {
-      "node": "12.14.0"
+    "node": "12.14.0"
   }
 }
