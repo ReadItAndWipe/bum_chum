@@ -101,3 +101,9 @@ body {
   input, select {
       width: 300px;
   }
+
+.order-box {
+    margin-left: 15%;
+    width: 80%;
+    border-bottom: solid 5px rgb(247, 147, 30);
+}

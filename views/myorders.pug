@@ -6,7 +6,7 @@ block content
             .col-md-12.col-md-offset-3
                 h1 My Subscriptions
                 each order in orders
-                    div
+                    div.order-box
                         h2 Subscription for #{order.name}
                         p Size: #{order.subscription.size}
                         p Category: #{order.rolls.category}
@@ -17,3 +17,6 @@ block content
                         p Rolls: Storm Poopers
                         p Size: #{order.subscription.size}
                         button Update this delivery
+                        <br>
+                        <br>
+                        <br>
