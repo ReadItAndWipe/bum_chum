@@ -11,23 +11,24 @@ block content
                         input(
                             type="text"
                             name="name"
-                            placeholder='first and last'
+                            placeholder='Winnie the Poo'
                         )
                     div.form-group
                         label(for="address") Postal address:
                         input(
                             type="text"
                             name="address"
-                            placeholder='2 moon cres, Bottomsville'
+                            placeholder='2 Moon Crescent, Bottomsville'
                         )
                     div.form-group
                         label(for="rolls") Select your default roll category:
-                        select(name='dropDown', id='')
+                        select(name='rolls', id='')
                             each roll in rolls
-                                option=roll.name
+                                option(value=roll.id) #{roll.name}
+
                     div.form-group
                         label(for="subscription") Select your default subscription size:
-                        select(name='dropDown', id='')
+                        select(name='subscription', id='')
                             each subscription in subscriptions
-                                option=subscription.size     
+                                option(value=subscription.id) #{subscription.size}
                     button.btn.btn-primary(type='submit') Submit order
