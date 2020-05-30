@@ -1,0 +1,33 @@
+extends layout 
+
+block content
+    .main.container
+        .row
+            .col-md-6.col-md-offset-3
+                h1 Order Subscription
+                form(method='POST' action='/api/order')
+                    div.form-group
+                        label(for="name") Name of recipient:
+                        input(
+                            type="text"
+                            name="name"
+                            placeholder='first and last'
+                        )
+                    div.form-group
+                        label(for="address") Postal address:
+                        input(
+                            type="text"
+                            name="address"
+                            placeholder='2 moon cres, Bottomsville'
+                        )
+                    div.form-group
+                        label(for="rolls") Select your default roll category:
+                        select(name='dropDown', id='')
+                            each roll in rolls
+                                option=roll.name
+                    div.form-group
+                        label(for="subscription") Select your default subscription size:
+                        select(name='dropDown', id='')
+                            each subscription in subscriptions
+                                option=subscription.size     
+                    button.btn.btn-primary(type='submit') Submit order

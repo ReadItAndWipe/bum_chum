@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const connectDB = require('./config/db');
+const bodyParser = require('body-parser');
 
 const path = require('path');
 
@@ -16,14 +17,20 @@ connectDB();
 // Middlewear on all routes 
 app.use(cors());
 app.use(express.json({ extended: false }));
+app.use(express.static('public'));
 
+// pug templating
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
+app.use(bodyParser.urlencoded({ extended: true }));
 // Define Routes
 app.use('/api/', require('./routes/api'))
 app.use('/api/users', require('./routes/api/users'));
-app.use('/api/auth', require('./routes/api/auth'));
+app.use('/api/login', require('./routes/api/login'));
+app.use('/api/order', require('./routes/api/order'));
+app.use('/api/myorders', require('./routes/api/myorders'));
+app.use('/api/about', require('./routes/api/about'))
 
 // Listen
 app.listen(port, () => console.log(`Ready to wide on bum ${port}`));
