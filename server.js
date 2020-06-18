@@ -11,16 +11,12 @@ const path = require('path');
 
 // Sets port if deploying to external provider 
 // or port assigned already
-const port = process.env.port || 5000;
+const port = process.env.PORT || 5000;
 
+const app = express();
 if (process.env.NODE_ENV !== "production") {
     require("dotenv").config();
     }
-
-
-
-const app = express();
-
 //Connect the database 
 connectDB();
 
