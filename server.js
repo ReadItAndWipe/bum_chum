@@ -21,7 +21,7 @@ const app = express();
 // }
 //Connect the database 
 connectDB();
-
+console.log(process.env.NODE_ENV);
 // Middleware on all routes 
 app.use(cors());
 app.use(express.json({ extended: false }));
