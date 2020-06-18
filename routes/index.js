@@ -16,7 +16,7 @@ router.get('/', async (req, res) => {
   try {
     let subscriptions = await Subscription.find()
     let rolls = await Roll.find()
-    res.render('home', { rolls, subscriptions } )
+    res.render('home', { title: "Read it 'n' Wipe", rolls, subscriptions } )
   } catch (error) {
     if(!rolls){
       return res.status(501).json("out of rolls")

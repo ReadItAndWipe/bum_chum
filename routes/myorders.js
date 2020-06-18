@@ -24,7 +24,7 @@ router.get('/', async (req, res) => {
     if(!orders){
         return res.json({msg: "You have no current orders"})
     }
-    res.render('myorders', {orders})
+    res.render('myorders', { title: 'My orders', orders})
   } catch (error) {
       console.error(error.msg)
       return res.status(500).json("server error")
