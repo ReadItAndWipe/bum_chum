@@ -2,11 +2,11 @@ const express = require('express');
 const router = express.Router();
 
 //Import auth middleware
-const auth = require("../../middleware/auth")
+const auth = require("../middleware/auth")
 
 //Import Roll and Subsc schema
-const Roll = require('../../models/Roll');
-const Subscription = require('../../models/Subscription');
+const Roll = require('../models/Roll');
+const Subscription = require('../models/Subscription');
 
 // @route    GET api/
 // @desc     Landing page shows all rolls  

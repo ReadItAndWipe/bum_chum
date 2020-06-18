@@ -1,11 +1,11 @@
 
 
 ### GET all rolls
-GET http://localhost:5000/api HTTP/1.1
+GET http://localhost:5000 HTTP/1.1
 
 
 ### POST register route - make tester-bob 
-POST http://localhost:5000/api/login/register
+POST http://localhost:5000/login/register
 content-type: application/json
 
 {
@@ -15,7 +15,7 @@ content-type: application/json
 }
 
 ### POST auth route - tester-bob login 
-POST http://localhost:5000/api/login/login
+POST http://localhost:5000/login/login
 content-type: application/json
 
 {
@@ -24,7 +24,7 @@ content-type: application/json
 }
 
 ### POST subscription route - tester-osco login 
-POST http://localhost:5000/api/order
+POST http://localhost:5000/order
 content-type: application/json
 Cookie: connect.sid=s%3AEC-DlFtveuvq7QIEgXEZ9_92C3bKYDYJ.GEb5NTplTey1KZU6wSHMCt1Kv%2BTb4zYq%2BiaQ1BZxsWw
 

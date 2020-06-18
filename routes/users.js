@@ -8,7 +8,7 @@ const config = require('config')
 const { check, validationResult } = require('express-validator');
 
 //Import User Scheme 
-const User = require('../../models/User');
+const User = require('../models/User');
 
 // @route    GET api/users
 // @desc     Register user 

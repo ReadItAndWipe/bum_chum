@@ -5,9 +5,9 @@ const router = express.Router();
 const { check, validationResult } = require('express-validator');
 
 //Import User Scheme 
-const Subscription= require('../../models/Subscription');
-const Roll = require('../../models/Roll');
-const Order = require('../../models/Order');
+const Subscription= require('../models/Subscription');
+const Roll = require('../models/Roll');
+const Order = require('../models/Order');
 
 // @route    GET api/order
 // @desc     Generate order form 
@@ -20,7 +20,7 @@ router.get('/', async (req, res) => {
 
 const {
   userAuthenticated
-} = require('../../middleware/passport');
+} = require('../middleware/passport');
 
 router.use(userAuthenticated);
 // @route    POST api/order

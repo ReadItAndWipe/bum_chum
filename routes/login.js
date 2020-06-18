@@ -9,7 +9,7 @@ const config = require('config');
 const { check, validationResult } = require('express-validator');
 
 //Import User schema
-const User = require('../../models/User');
+const User = require('../models/User');
 
 // @route    GET api/login
 // @desc     Login form for user 

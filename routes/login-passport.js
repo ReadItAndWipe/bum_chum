@@ -1,9 +1,9 @@
 const express = require('express');
 const router = express.Router();
 const passport = require('passport');
-const User = require('../../models/User');
-const Roll = require('../../models/Roll');
-const Subscription = require('../../models/Subscription');
+const User = require('../models/User');
+const Roll = require('../models/Roll');
+const Subscription = require('../models/Subscription');
 
 const register = function (req, res) {
     User.register(new User({
@@ -27,7 +27,7 @@ const logout = function (req, res) {
     console.log('logged out user');
     console.log('session object:', req.session);
     console.log('req.user:', req.user);
-    res.redirect('/api');
+    res.redirect('/');
 }
 
 // helper functions
@@ -41,7 +41,7 @@ function loginUser(req, res) {
         console.log('session object:', req.session);
         console.log('req.user:', req.user);
         res.status(200);
-        res.redirect('/api/order')
+        res.redirect('/order')
     });
 }
 

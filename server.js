@@ -49,12 +49,12 @@ app.set('view engine', 'pug');
 
 app.use(bodyParser.urlencoded({ extended: true }));
 // Define Routes
-app.use('/api/', require('./routes/api'))
-app.use('/api/users', require('./routes/api/users'));
-app.use('/api/login', require('./routes/api/login-passport'));
-app.use('/api/order', require('./routes/api/order'));
-app.use('/api/myorders', require('./routes/api/myorders'));
-app.use('/api/about', require('./routes/api/about'))
+app.use('/', require('./routes'))
+app.use('/users', require('./routes/users'));
+app.use('/login', require('./routes/login-passport'));
+app.use('/order', require('./routes/order'));
+app.use('/myorders', require('./routes/myorders'));
+app.use('/about', require('./routes/about'))
 
 // Listen
 app.listen(port, () => console.log(`Ready to wipe on bum ${port}`));
