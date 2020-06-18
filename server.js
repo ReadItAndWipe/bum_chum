@@ -14,9 +14,11 @@ const path = require('path');
 const port = process.env.PORT || 5000;
 
 const app = express();
-if (process.env.NODE_ENV !== "production") {
-    require("dotenv").config();
-    }
+
+// if (process.env.NODE_ENV !== 'production') {
+//     require("dotenv").config();
+
+// }
 //Connect the database 
 connectDB();
 

@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const config = require('config');
 // const db = config.get('mongoURI')
 
-const db = process.env.MONGODB_URI || 'mongodb://localhost/bum_chum'
+const db = process.env.MONGODB_URI || 'mongodb://localhost/bum_chum';
 
 const connectDB = async () => {
   try {
