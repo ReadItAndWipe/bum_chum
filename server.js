@@ -15,13 +15,11 @@ const port = process.env.PORT || 5000;
 
 const app = express();
 
-// if (process.env.NODE_ENV !== 'production') {
-//     require("dotenv").config();
-
-// }
 //Connect the database 
 connectDB();
 console.log(process.env.NODE_ENV);
+console.log(process.env.MONGODB_URI);
+
 // Middleware on all routes 
 app.use(cors());
 app.use(express.json({ extended: false }));
